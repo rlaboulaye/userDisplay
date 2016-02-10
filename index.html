@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<link rel="stylesheet" href="stylesheet.css" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <meta charset="utf-8">
+  <title>User Display</title>
+</head>
+<body>
+  <div ng-app='app' ng-controller='mainCtrl'>
+    <div id="inputBar">
+      <h1>Create new user</h1>
+
+      <form name='userForm' ng-submit='addNew(userForm)'>
+
+        <input placeholder='Name' ng-model='userForm.name'/>
+        <input placeholder='Image Url' ng-model='userForm.url'/>
+        <input placeholder='Hobby' ng-model='userForm.hobby'/>
+
+        <button class='w3-btn w3-orange' type='submit'>Add New</button>
+      </form>
+    </div>
+
+    <div id="padDiv">
+      <h1>Create</h1>
+      <form>
+        <input />
+        <input />
+        <button></button>
+      </form>
+    </div>
+
+    <ul class="User-list">
+      <li ng-repeat='user in users'>
+        <avatar user='user' />
+      </li>
+    </ul>
+  </div>
+  <script src="mainController.js"></script>
+</body>
+</html>
